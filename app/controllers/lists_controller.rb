@@ -1,8 +1,11 @@
 class ListsController < ApplicationController
 
   def index
-    @lists = list.all
+    @lists = List.all
   end
 
+  def show
+   @lists = List.find(params[:id])
+  end
 
 end
